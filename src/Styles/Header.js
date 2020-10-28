@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
 export const SectionHeader = styled.div`
-  background: red;
+  background-color: #fff159;
 `;
-
