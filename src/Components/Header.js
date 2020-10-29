@@ -1,25 +1,45 @@
-import React from 'react';
-import { SectionHeader } from '../Styles/Header';
+import React, { useState } from 'react';
+import {
+  SectionHeader,
+  ImageLogo,
+  InputSearch,
+  ButtonSearch,
+  ImageSearch,
+} from '../Styles/Header';
+import Logo from '../Assets/Image/logo.png';
+import Search from '../Assets/Image/Search.png';
 
 const Header = () => {
+  const [value, setValue] = useState('');
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(value);
+  };
+
   return (
     <>
       <SectionHeader className="container-fluid">
         <div className="row">
-          <div className="col-3">
-            <h1>LOGO</h1>
-          </div>
+          <div className="container">
+            <div className="row">
+              <div className="col-2">
+                <ImageLogo src={Logo}></ImageLogo>
+              </div>
 
-          <div className="col-3">
-            <input placeholder="" />
-          </div>
-
-          <div className="col-2">
-            <h1>Menu</h1>
-          </div>
-
-          <div className="col-3">
-            <h1>LOJA</h1>
+              <div className="col-10">
+                <form onSubmit={handleSubmit}>
+                  <InputSearch
+                    onChange={(event) => setValue(event.target.value)}
+                    value={value}
+                    placeholder="Buscar produtos, marcas e muito mais…"
+                  />
+                  <ButtonSearch type="submit">
+                    <ImageSearch src={Search}></ImageSearch>
+                  </ButtonSearch>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </SectionHeader>
