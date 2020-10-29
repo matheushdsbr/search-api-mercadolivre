@@ -4,7 +4,8 @@ import {
   ImageLogo,
   InputSearch,
   ButtonSearch,
-  ImageSearch,
+  HeaderContent,
+  FormSearch,
 } from '../Styles/Header';
 import Logo from '../Assets/Image/logo.png';
 import Search from '../Assets/Image/Search.png';
@@ -19,26 +20,28 @@ const Header = () => {
 
   return (
     <>
-      <SectionHeader className="container-fluid">
-        <div className="row">
-          <div className="container">
-            <div className="row">
-              <div className="col-2">
-                <ImageLogo src={Logo}></ImageLogo>
-              </div>
+      <SectionHeader>
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <HeaderContent>
+                <ImageLogo>
+                  <img src={Logo} alt="Logo Mercado Livre" />
+                </ImageLogo>
 
-              <div className="col-10">
-                <form onSubmit={handleSubmit}>
+                <FormSearch onSubmit={handleSubmit}>
                   <InputSearch
                     onChange={(event) => setValue(event.target.value)}
                     value={value}
                     placeholder="Buscar produtos, marcas e muito mais…"
                   />
                   <ButtonSearch type="submit">
-                    <ImageSearch src={Search}></ImageSearch>
+                    <div>
+                      <img src={Search}></img>
+                    </div>
                   </ButtonSearch>
-                </form>
-              </div>
+                </FormSearch>
+              </HeaderContent>
             </div>
           </div>
         </div>
