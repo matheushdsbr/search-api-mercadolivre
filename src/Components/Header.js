@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import {
   SectionHeader,
   ImageLogo,
@@ -46,6 +47,32 @@ const Header = () => {
           </div>
         </div>
       </SectionHeader>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <NavLink to="/" activeStyle={{ color: 'red' }} end>
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="ListProduct" activeStyle={{ color: 'red' }}>
+                Products List
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="Product" activeStyle={{ color: 'red' }}>
+                Product
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="Error404" activeStyle={{ color: 'red' }}>
+                404
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </>
   );
 };
