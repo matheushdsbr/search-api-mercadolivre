@@ -40,42 +40,13 @@ const Header = () => {
                   placeholder="Buscar produtos, marcas e muito mais…"
                 />
                 <ButtonSearch type="submit">
-                  <div>
-                    <img src={Search}></img>
-                  </div>
+                  <img src={Search}></img>
                 </ButtonSearch>
               </FormSearch>
             </div>
           </div>
         </div>
       </SectionHeader>
-
-      {/* <SectionHeader>
-        <div className="container">
-          <div className="row">
-            <div className="col-12">
-              <HeaderContent>
-                <ImageLogo>
-                  <img src={Logo} alt="Logo Mercado Livre" />
-                </ImageLogo>
-
-                <FormSearch onSubmit={handleSubmit}>
-                  <InputSearch
-                    onChange={(event) => setValue(event.target.value)}
-                    value={value}
-                    placeholder="Buscar produtos, marcas e muito mais…"
-                  />
-                  <ButtonSearch type="submit">
-                    <div>
-                      <img src={Search}></img>
-                    </div>
-                  </ButtonSearch>
-                </FormSearch>
-              </HeaderContent>
-            </div>
-          </div>
-        </div>
-      </SectionHeader> */}
 
       <div>
         <nav>
