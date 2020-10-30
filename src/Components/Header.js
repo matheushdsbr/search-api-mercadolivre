@@ -5,7 +5,7 @@ import {
   ImageLogo,
   InputSearch,
   ButtonSearch,
-  HeaderContent,
+  LogoContent,
   FormSearch,
 } from '../Styles/Header';
 import Logo from '../Assets/Image/logo.png';
@@ -22,6 +22,35 @@ const Header = () => {
   return (
     <>
       <SectionHeader>
+        <div className="container">
+          <div className="row">
+            <div className="col-2">
+              <LogoContent>
+                <ImageLogo>
+                  <img src={Logo} alt="Logo Mercado Livre" />
+                </ImageLogo>
+              </LogoContent>
+            </div>
+
+            <div className="col-10">
+              <FormSearch onSubmit={handleSubmit}>
+                <InputSearch
+                  onChange={(event) => setValue(event.target.value)}
+                  value={value}
+                  placeholder="Buscar produtos, marcas e muito mais…"
+                />
+                <ButtonSearch type="submit">
+                  <div>
+                    <img src={Search}></img>
+                  </div>
+                </ButtonSearch>
+              </FormSearch>
+            </div>
+          </div>
+        </div>
+      </SectionHeader>
+
+      {/* <SectionHeader>
         <div className="container">
           <div className="row">
             <div className="col-12">
@@ -46,7 +75,8 @@ const Header = () => {
             </div>
           </div>
         </div>
-      </SectionHeader>
+      </SectionHeader> */}
+
       <div>
         <nav>
           <ul>

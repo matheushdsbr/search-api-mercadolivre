@@ -5,15 +5,16 @@ export const SectionHeader = styled.header`
   padding: 10px;
 `;
 
-export const HeaderContent = styled.div`
+export const LogoContent = styled.div`
   display: flex;
   align-items: center;
+  height: 100%;
+  width: 45px;
 `;
 
 export const ImageLogo = styled.a`
-  width: 44px;
-  margin-right: 10px;
   cursor: pointer;
+
   img {
     width: 100%;
   }
@@ -21,17 +22,20 @@ export const ImageLogo = styled.a`
 
 export const FormSearch = styled.form`
   width: 100%;
+  height: 40px;
   position: relative;
 `;
 
 export const InputSearch = styled.input`
-  border: none;
   width: 100%;
-  padding: 10px 45px 10px 10px;
+  height: 100%;
+  border: none;
+  padding: 10px 50px 10px 10px;
   border-radius: 2px;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+
   :focus {
-    outline: 0;
+    outline: none;
   }
 `;
 
@@ -44,21 +48,25 @@ export const ButtonSearch = styled.button`
   border: none;
   padding: 0 10px;
 
+  :before {
+    content: '';
+    background: #eeeeee;
+    position: absolute;
+    right: 40px;
+    top: 6px;
+    height: 72%;
+    width: 1px;
+  }
+
   :focus {
     outline: 0;
   }
 
   div {
-    border-left: 1px solid rgba(0, 0, 0, 0.1);
-    height: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 10px;
   }
 
   img {
-    width: 20px;
     opacity: 0.5;
+    width: 20px;
   }
 `;
